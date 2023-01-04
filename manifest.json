@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Twitter Enhancer",
+  "version": "1.1",
+
+  "description": "This extension will help you to hide promoted tweets and promoted accounts from your timeline",
+
+  "icons": {
+    "32": "icons/tw-enhancer-32.png",
+    "48": "icons/tw-enhancer-48.png",
+    "64": "icons/tw-enhancer-64.png",
+    "96": "icons/tw-enhancer-96.png",
+    "128": "icons/tw-enhancer-128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*"],
+      "js": ["enhancer.js"]
+    }
+  ]
+
+}
