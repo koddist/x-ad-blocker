@@ -1,23 +1,24 @@
 {
-  "manifest_version": 2,
-  "name": "Twitter Enhancer",
-  "version": "1.1",
-
-  "description": "This extension will help you to hide promoted tweets and promoted accounts from your timeline",
-
+  "manifest_version": 3,
+  "name": "X Ad Blocker",
+  "version": "1.2",
+  "description": "This extension will help you to hide promoted x posts from your timeline",
   "icons": {
-    "32": "icons/tw-enhancer-32.png",
-    "48": "icons/tw-enhancer-48.png",
-    "64": "icons/tw-enhancer-64.png",
-    "96": "icons/tw-enhancer-96.png",
-    "128": "icons/tw-enhancer-128.png"
+    "32": "icons/x-enhancer-32.png",
+    "48": "icons/x-enhancer-48.png",
+    "64": "icons/x-enhancer-64.png",
+    "96": "icons/x-enhancer-96.png",
+    "128": "icons/x-enhancer-128.png"
   },
-
   "content_scripts": [
     {
-      "matches": ["*://*.twitter.com/*"],
-      "js": ["enhancer.js"]
+      "matches": [
+        "*://*.twitter.com/*",
+        "*://*.x.com/*"
+      ],
+      "js": [
+        "ad-blocker.js"
+      ]
     }
   ]
-
 }
